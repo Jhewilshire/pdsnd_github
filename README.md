@@ -30,6 +30,12 @@ _Information included in data files_:\
 Start Time | End Time | Trip Duration | Start Station | End Station | User Type | Gender | Birth Year
 
 
+## Testing
+1. download bikeshare data from https://www.motivateco.com/ and save as csv files
+2. modify `python_project_submitted.py` file to include the additional city options
+3. test run `py` file
+
+
 ## Credits
 Bikeshare data provided by [Motivate](https://www.motivateco.com/)\
 Python codes template provide by [Udacity](https://www.udacity.com/)\
