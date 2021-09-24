@@ -15,6 +15,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 months = ['january', 'february', 'march', 'april', 'may', 'june']
 
+line = '-'*40
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -42,7 +44,7 @@ def get_filters():
         weekday_as_int = time.strptime(day.title(), "%A").tm_wday
         print("We are filtering by {}, {}th day of the week.".format(day,weekday_as_int))
 
-    print('-'*40)
+    print(line)
     return city, month, day
 
 
@@ -93,7 +95,7 @@ def time_stats(df):
     print("Most popular hour of the day to start travelling: \n{}".format(popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
 
 def station_stats(df):
@@ -113,7 +115,7 @@ def station_stats(df):
     print("Most popular combination of start & end stations is: \n{}".format(popular_combination))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
 
 def trip_duration_stats(df):
@@ -127,7 +129,7 @@ def trip_duration_stats(df):
     print("Average trip duration(in minutes) for the selected filter: ", df['Trip Duration'].mean()/60)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
 
 def user_stats(df):
@@ -151,7 +153,7 @@ def user_stats(df):
         print("The most common year of birth is:\n{} has no birth year data.".format(city))
         
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
     
 def display_user(df):
