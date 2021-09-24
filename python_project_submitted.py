@@ -11,7 +11,10 @@ import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+              'washington': 'washington.csv',
+              'boston': 'boston.csv',
+              'portland': 'portland.csv'
+              }
 
 months = ['january', 'february', 'march', 'april', 'may', 'june']
 
