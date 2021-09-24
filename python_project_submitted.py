@@ -13,6 +13,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+weekday_count = {0:'Monday', 1:'Tuesday', 2:'Wednesday',3:'Thursday', 4:'Friday', 5:;'Saturday', 6:'Sunday'}
+
 months = ['january', 'february', 'march', 'april', 'may', 'june']
 
 line = '-'*40
@@ -169,6 +171,7 @@ def display_user(df):
             display_countine = input("Do you want to see more, yes or no:\n")
             if display_countine.lower() != 'yes':
                 break
+
 
 def main():
     while True:
