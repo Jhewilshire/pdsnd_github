@@ -9,12 +9,11 @@ import time
 import pandas as pd
 import numpy as np
 
+# cities can be added/removed here in CITY_DATA dist
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv',
-              'boston': 'boston.csv',
-              'portland': 'portland.csv'
-              }
+              } 
 
 months = ['january', 'february', 'march', 'april', 'may', 'june']
 
