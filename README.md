@@ -1,17 +1,44 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# US :bike: :bike: Bikeshare Data Analysis Python Codes
 
-### Date created
-Include the date you created this project and README file.
+*Created on 9/23/2021*
 
-### Project Title
-Replace the Project Title
+## Project
+US Bikeshare Data Analysis
 
-### Description
-Describe what your project is about and what it does
 
-### Files used
-Include the files used
+## Description
+This is a python application to explore US Bikshare Data. The goal is to compare system usage between three U.S. large cities: Chicago, New York City, and Washington DC.
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+#### The appliation yields statistics:
+1. Popular time of travel
+2. Popular stations and trips
+3. Trip duration
+4. User info.(only available for Chicago and NYC)
+
+
+## Files used
+**:bike: Bikeshare data in three major U.S. cities - Chicago, New York, and Washington**
+
+Data provided by [Motivate](https://www.motivateco.com/)
+
+    _Data files_:
+* chicago.csv
+* new_york_city.csv
+* washingon.csv
+
+_Information included in data files_:\
+Start Time | End Time | Trip Duration | Start Station | End Station | User Type | Gender | Birth Year
+
+
+## Credits
+Bikeshare data provided by [Motivate](https://www.motivateco.com/)\
+Python codes template provide by [Udacity](https://www.udacity.com/)\
+Python codes drafted by Jhe @Jhewilshire
+
+
+## Development
+Please feel free to improve the codes and show off your fancy :+1: coding skills 
+
+Submit pull requests on :octocat: 
+
 
