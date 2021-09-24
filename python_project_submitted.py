@@ -15,7 +15,11 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv',
               } 
 
+weekday_count = {0:'Monday', 1:'Tuesday', 2:'Wednesday',3:'Thursday', 4:'Friday', 5:;'Saturday', 6:'Sunday'}
+
 months = ['january', 'february', 'march', 'april', 'may', 'june']
+
+line = '-'*40
 
 def get_filters():
     """
@@ -44,7 +48,7 @@ def get_filters():
         weekday_as_int = time.strptime(day.title(), "%A").tm_wday
         print("We are filtering by {}, {}th day of the week.".format(day,weekday_as_int))
 
-    print('-'*40)
+    print(line)
     return city, month, day
 
 
@@ -95,7 +99,7 @@ def time_stats(df):
     print("Most popular hour of the day to start travelling: \n{}".format(popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
 
 def station_stats(df):
@@ -115,7 +119,7 @@ def station_stats(df):
     print("Most popular combination of start & end stations is: \n{}".format(popular_combination))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
 
 def trip_duration_stats(df):
@@ -129,7 +133,7 @@ def trip_duration_stats(df):
     print("Average trip duration(in minutes) for the selected filter: ", df['Trip Duration'].mean()/60)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
 
 def user_stats(df):
@@ -141,7 +145,7 @@ def user_stats(df):
     print("User type information:\n",df['User Type'].value_counts())
     
     # Washington city data doesn't include Gender or Birth Year, therefore, handling cities with User detailed info. here first. 
-    if city != 'washington':
+    if city not in CITY_DATA.key:
         print("User gender breakdown:\n", df['Gender'].value_counts())
         print("The oldest, youngest year of birth in the select filtered group:\n", int(df['Birth Year'].min()),",", int(df['Birth Year'].max()) ,",respectively")
         print("The most common year of birth is:\n", int(df['Birth Year'].mode()[0]))
@@ -153,7 +157,7 @@ def user_stats(df):
         print("The most common year of birth is:\n{} has no birth year data.".format(city))
         
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(line)
 
     
 def display_user(df):
@@ -169,6 +173,7 @@ def display_user(df):
             display_countine = input("Do you want to see more, yes or no:\n")
             if display_countine.lower() != 'yes':
                 break
+
 
 def main():
     while True:
