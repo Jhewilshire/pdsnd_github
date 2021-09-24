@@ -143,7 +143,7 @@ def user_stats(df):
     print("User type information:\n",df['User Type'].value_counts())
     
     # Washington city data doesn't include Gender or Birth Year, therefore, handling cities with User detailed info. here first. 
-    if city != 'washington':
+    if city not in CITY_DATA.key:
         print("User gender breakdown:\n", df['Gender'].value_counts())
         print("The oldest, youngest year of birth in the select filtered group:\n", int(df['Birth Year'].min()),",", int(df['Birth Year'].max()) ,",respectively")
         print("The most common year of birth is:\n", int(df['Birth Year'].mode()[0]))
